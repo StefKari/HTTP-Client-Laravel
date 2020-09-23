@@ -19,8 +19,6 @@ class SearchDropdown extends Component
               ->json()['results'];
         }
 
-        //dump($searchResults);
-
         return view('livewire.search-dropdown', [
           'searchResults' => $searchResults,
         ]);
