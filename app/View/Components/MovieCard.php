@@ -8,10 +8,12 @@ class MovieCard extends Component
 {
     public $movie;
     public $genres;
+
     /**
-     * Create a new component instance.
+     * Creating a new component.
      *
-     * @return void
+     * @param int
+     * @return array
      */
     public function __construct($movie, $genres)
     {
@@ -21,9 +23,10 @@ class MovieCard extends Component
     }
 
     /**
-     * Get the view / contents that represent the component.
+     * Contents that represent the component.
      *
-     * @return \Illuminate\View\View|string
+     * @param void
+     * @return View
      */
     public function render()
     {
