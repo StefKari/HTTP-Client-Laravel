@@ -11,8 +11,8 @@ class MoviesController extends Controller
     /**
      * Display a listing of the data from TMDB Api.
      *
-     * @param void
-     * @return array
+     * @param  void
+     * @return object
      */
     public function index()
     {
@@ -32,18 +32,19 @@ class MoviesController extends Controller
             return [$genre['id'] => $genre['name']];
         });
 
-        return view('index', [
+        return (view('index', [
             'popularMovies' => $popularMovies,
             'nowPlayingMovies' => $nowPlayingMovies,
             'genres' => $genres,
-        ]);
+        ]));
+
     }
 
     /**
      * Display the specified data.
      *
      * @param  int  $id
-     * @return array
+     * @return object
      */
     public function show($id)
     {
