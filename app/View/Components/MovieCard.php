@@ -12,8 +12,9 @@ class MovieCard extends Component
     /**
      * Creating a new component.
      *
-     * @param int
-     * @return array
+     * @param  int $movie
+     * @param  int $genres
+     * @return collection
      */
     public function __construct($movie, $genres)
     {
@@ -25,8 +26,8 @@ class MovieCard extends Component
     /**
      * Contents that represent the component.
      *
-     * @param void
-     * @return View
+     * @param  void
+     * @return object
      */
     public function render()
     {
